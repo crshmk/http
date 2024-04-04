@@ -1,5 +1,5 @@
 {
-  "name": "http",
+  "name": "request",
   "version": "0.0.1",
   "description": "axios wrapper",
   "source": "src/index.js",

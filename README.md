@@ -1,3 +1,9 @@
+```bash
+npm i github:crshmk/request
+```
+
+---
+
 ## [Axios](https://www.npmjs.com/package/axios) wrapper 
 
 - async / await use without the need for try / catch blocks 
