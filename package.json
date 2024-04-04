@@ -1,26 +1,29 @@
 {
-  "name": "lib",
+  "name": "http",
   "version": "0.0.1",
-  "description": "basic rollup setup",
-  "main": "./dist/log.min.js",
+  "description": "axios wrapper",
+  "source": "src/index.js",
+  "main": "dist/main.js",
   "type": "commonjs",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf .parcel-cache && parcel build --no-cache",
     "test": "jest"
   },
   "keywords": [
-    "rollup"
+    "axios",
+    "http",
+    "async"
   ],
   "author": "Chris Hammock",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-syntax-jsx": "^7.18.6",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6",
-    "jest": "^29.4.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify": "^6.0.4"
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "qs": "^6.12.0",
+    "ramda": "^0.29.1",
+    "ramjam": "^1.3.1"
   }
 }
