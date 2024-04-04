@@ -25,7 +25,7 @@ const makeGetUrl = (route, query) => {
   return `${route}?${queryString}`
 }
 
-const create = config => {
+export const create = config => {
 
   const http = axios.create({
     withCredentials: true,
@@ -51,5 +51,3 @@ const create = config => {
     delete: destroy
   }
 }
- 
-export default create

@@ -8,17 +8,11 @@ function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
 }
 
-function $parcel$defineInteropFlag(a) {
-  Object.defineProperty(a, '__esModule', {value: true, configurable: true});
-}
-
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
 }
 
-$parcel$defineInteropFlag(module.exports);
-
-$parcel$export(module.exports, "default", () => $4fa36e821943b400$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "create", () => $4fa36e821943b400$export$185802fd694ee1f5);
 /**
  * wrap axios
  * 
@@ -128,7 +122,7 @@ const $4fa36e821943b400$var$makeGetUrl = (route, query)=>{
     const queryString = (0, ($parcel$interopDefault($gXNCa$qs))).stringify(query);
     return `${route}?${queryString}`;
 };
-const $4fa36e821943b400$var$create = (config)=>{
+const $4fa36e821943b400$export$185802fd694ee1f5 = (config)=>{
     const http = (0, ($parcel$interopDefault($gXNCa$axios))).create({
         withCredentials: true,
         ...config
@@ -148,7 +142,6 @@ const $4fa36e821943b400$var$create = (config)=>{
         delete: destroy
     };
 };
-var $4fa36e821943b400$export$2e2bcd8739ae039 = $4fa36e821943b400$var$create;
 
 
 //# sourceMappingURL=main.js.map
