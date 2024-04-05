@@ -2,6 +2,8 @@
 npm i github:crshmk/request
 ```
 
+http to connect server microservices; not for client
+
 ---
 
 ## [Axios](https://www.npmjs.com/package/axios) wrapper 
@@ -13,11 +15,13 @@ npm i github:crshmk/request
 
 1. Pass a config to [instantiate](https://axios-http.com/docs/instance) axios 
 ```javascript 
-import wrapAxios from 'wrap-axios'
+import { create } from 'request'
 
-const baseURL = 'http://localhost:3000/api/v1'
+const config = {
+  baseURL: 'http://localhost:3000'
+}
 
-const http = wrapAxios({ baseURL })
+export const serviceHttp = create(config)
 // { get, put, post, delete }
 ```
 
