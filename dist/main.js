@@ -50,6 +50,9 @@ $parcel$export(module.exports, "create", () => $4fa36e821943b400$export$185802fd
  *    status: number
  *    statusText: string
  *    response_data: string
+ *    port: number
+ *    code: string
+ *    cause: string
  *  }
  */ 
 
@@ -76,14 +79,30 @@ const $66f9586ab06e4c5b$var$axiosErrorPaths = [
     [
         "response",
         "data"
+    ],
+    [
+        "cause",
+        "errors",
+        0,
+        "port"
+    ],
+    [
+        "code"
+    ],
+    [
+        "cause"
     ]
 ];
 const $66f9586ab06e4c5b$export$958d88d8703fc2c0 = {
-    url: undefined,
-    data: undefined,
+    message: "unknown error",
+    url: "",
+    data: "",
     status: 500,
     statusText: "internal server error",
-    response_data: undefined
+    response_data: "",
+    port: "",
+    code: "",
+    cause: ""
 };
 const $66f9586ab06e4c5b$export$4112c8fc5d5c9ceb = (0, $gXNCa$ramda.mergeRight)($66f9586ab06e4c5b$export$958d88d8703fc2c0);
 const $66f9586ab06e4c5b$var$makeError = (0, $gXNCa$ramda.pipe)((0, $gXNCa$ramjam.flatPick)($66f9586ab06e4c5b$var$axiosErrorPaths), $66f9586ab06e4c5b$export$4112c8fc5d5c9ceb);

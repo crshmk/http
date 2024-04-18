@@ -10,6 +10,9 @@
  *    status: number
  *    statusText: string
  *    response_data: string
+ *    port: number
+ *    code: string
+ *    cause: string
  *  }
  */
 import { mergeRight, pipe } from 'ramda'
@@ -21,15 +24,22 @@ const axiosErrorPaths = [
   ['config', 'data'],
   ['response', 'status'],
   ['response', 'statusText'],
-  ['response', 'data']
+  ['response', 'data'],
+  ['cause', 'errors', 0, 'port'],
+  ['code'],
+  ['cause']
 ]
 
 export const errorDefaults = {
-  url: undefined, 
-  data: undefined, 
+  message: 'unknown error',
+  url: '', 
+  data: '', 
   status: 500,
   statusText: 'internal server error',
-  response_data: undefined
+  response_data: '',
+  port: '',
+  code: '',
+  cause: ''
 }
 
 export const setErrorDefaults = mergeRight(errorDefaults)
@@ -40,7 +50,3 @@ const makeError = pipe(
 )
 
 export default makeError
-
-
-
-
